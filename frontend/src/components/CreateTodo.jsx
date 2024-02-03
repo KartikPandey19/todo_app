@@ -25,10 +25,10 @@ export function CreateTodo() {
         }} onClick={()=>{
             fetch("https://localhost:3000/todos",{
                 method:"post",
-            body:{
+            body: JSON.stringify({
                 title:title,
                 description:description,
-            }
+            })
             })
             
             .then(async function(res){
